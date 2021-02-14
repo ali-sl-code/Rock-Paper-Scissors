@@ -37,3 +37,48 @@ body {
         }
     }
 }
+
+.play-bord {
+    // direction , wrap, align, justify
+    @include flex(column, nowrap, center, flex-start);
+    width: 300px;
+    height: 300px;
+    background: transparent url("../images/bg-triangle.svg") no-repeat center center;
+    background-size: contain;
+    margin-top: 150px;
+    position: relative;
+    .bord {
+        // direction , wrap, align, justify
+        @include flex(column,nowrap,center,center);
+        width: 60%;
+        height: 60%;
+        border: none;
+        border-radius: 5000px;
+        position: absolute;
+        cursor: pointer;
+        &:nth-child(1) {
+            background-image: linear-gradient(to top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+            top: -20%;
+            left: -70px;
+            box-shadow: 0 10px hsl(39, 100%, 18%);
+        }
+        &:nth-child(2) {
+            background-image: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+            top: -20%;
+            right: -70px;
+            box-shadow: 0 10px hsl(230, 100%, 18%);
+        }
+        &:nth-child(3) {
+            background-image: linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+            bottom: -20%;
+            box-shadow: 0 10px hsl(349, 100%, 18%);
+        }
+        div {
+            width: 75%;
+            height: 75%;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5000px;
+        }
+    }
+}

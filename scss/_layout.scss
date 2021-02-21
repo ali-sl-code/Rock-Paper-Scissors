@@ -4,6 +4,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    position: relative;
 }
 
 .title-sect {
@@ -13,13 +14,13 @@ body {
     border: 3px solid hsl(217, 16%, 45%);
     border-radius: 15px;
     padding: 20px 30px;
-    margin-top: 50px;
+    margin-top: 40px;
     .score-div {
         // direction , wrap, align, justify
         @include flex(column, nowrap, center, center);
         width: 130px;
         height: 100px;
-        background-color: #ffffff;
+        background-color: $white;
         border-radius: 10px;
         span {
             font-family: 'Barlow Semi Condensed', sans-serif;
@@ -79,7 +80,7 @@ body {
             @include flex(column, nowrap, center, center);
             width: 75%;
             height: 75%;
-            background-color: #ffffff;
+            background-color: $white;
             border: none;
             border-radius: 5000px;
             box-shadow: inset 0 6px rgba($color: #000000, $alpha: 0.2);
@@ -88,5 +89,32 @@ body {
                 width: 70px;
             }
         }
+    }
+}
+
+.rulse-btn {
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 10px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: $white;
+        color: hsl(237, 49%, 15%);
+        box-shadow: 0 0 15px hsl(214, 47%, 23%);
     }
 }

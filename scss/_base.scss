@@ -9,6 +9,9 @@ a {
     list-style: none;
 }
 
+// vars
+$white: white;
+
 // Mixins
 @mixin flex($direction, $wrap, $align, $justify) {
     display: flex;

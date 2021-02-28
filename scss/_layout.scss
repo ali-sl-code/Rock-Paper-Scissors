@@ -111,10 +111,56 @@ body {
     line-height: normal;
     cursor: pointer;
     transition: all 0.3s;
+    outline: none;
 
     &:hover {
         background-color: $white;
         color: hsl(237, 49%, 15%);
         box-shadow: 0 0 15px hsl(214, 47%, 23%);
+    }
+}
+
+.rulse-back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+    // direction , wrap, align, justify
+    @include flex(column, nowrap, center, center);
+    display: none;
+}
+
+.rulse {
+    width: 25%;
+    height: 50vh;
+    background-color: $white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    // direction , wrap, align, justify
+    @include flex(column, nowrap, center, space-around);
+
+    .rulse-item {
+        width: 100%;
+        // direction , wrap, align, justify
+        @include flex(row, nowrap, center, space-between);
+
+        span {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 28px;
+            color: hsl(238, 47%, 21%);
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    > img {
+        width: 90%;
+        margin: auto;
     }
 }
